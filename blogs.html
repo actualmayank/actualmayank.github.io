@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>mayank. / blogs</title>
+  <link rel="stylesheet" href="assets/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <!-- 🌗 Toggle -->
+  <div class="fixed-toggle">
+    <span id="theme-icon" title="Toggle theme">🌙</span>
+  </div>
+
+  <!-- 🧠 Header -->
+  <header class="site-header">
+    <a href="index.html" class="site-name">mayank.</a><span class="page-path"> / blogs</span>
+  </header>
+
+  <!-- 📚 Blog Cards -->
+  <main class="blogs-page reveal">
+    <div class="blogs-grid">
+      <div class="blog-card">
+        <h3>Cloning a Website Taught Me More Than 4 College Semesters</h3>
+        <p>Turns out copying something is the best way to truly learn it. Here's how I built my own version and what I learned from it...</p>
+        <a href="blog1.html" class="read-more">Read More</a>
+      </div>
+
+      <div class="blog-card">
+        <h3>My Thoughts at 3AM</h3>
+        <p>Insomnia and existential questions — a dangerous combo. I started journaling to survive it. Here’s a look at my chaotic 3AM thoughts...</p>
+        <a href="blog2.html" class="read-more">Read More</a>
+      </div>
+    </div>
+  </main>
+
+  <!-- 👣 Footer -->
+  <footer class="footer">
+    <div class="footer-left">
+      Copyright © 2025 <a href="index.html">Mayank Kumar</a>
+    </div>
+    <div class="footer-right">
+      <a href="https://linkedin.com/in/actualmayank" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="https://github.com/actualmayank" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="https://instagram.com/actualmayank" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://monkeytype.com/profile/actualmayank" target="_blank"><i class="fas fa-keyboard"></i></a>
+    </div>
+  </footer>
+
+  <!-- 🌓 Theme Script -->
+  <script>
+    const themeIcon = document.getElementById('theme-icon');
+    const root = document.body;
+
+    if (localStorage.getItem('theme') === 'light') {
+      root.classList.add('light-theme');
+      themeIcon.textContent = '☀️';
+    }
+
+    themeIcon.addEventListener('click', () => {
+      if (root.classList.contains('light-theme')) {
+        root.classList.remove('light-theme');
+        localStorage.setItem('theme', 'dark');
+        themeIcon.textContent = '🌙';
+      } else {
+        root.classList.add('light-theme');
+        localStorage.setItem('theme', 'light');
+        themeIcon.textContent = '☀️';
+      }
+    });
+  </script>
+
+</body>
+</html>

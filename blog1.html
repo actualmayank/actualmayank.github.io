@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>mayank. / blog1</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="assets/favicon.png" />
+  <link rel="stylesheet" href="assets/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+<style>
+  .blog-title {
+    margin-top: 7rem;
+    font-size: 1.6rem;
+    font-weight: bold;
+    text-align: center;
+    padding: 0 1rem;
+  }
+
+  .blog-content {
+    max-width: 800px;
+    margin: 1.5rem auto 4rem;
+    padding: 0 2rem;
+    line-height: 1.6;
+    font-size: 1rem;
+  }
+
+  .back-btn {
+    position: fixed;
+    top: 5rem;
+    left: 2.5rem; /* adjusted from 1.5rem */
+    z-index: 1000;
+    padding: 0.4rem 1rem;
+    background: #38bdf8;
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    transition: all 0.3s ease;
+  }
+
+  .back-btn:hover {
+    background: #000;
+    color: #fff;
+  }
+
+  body.light-theme .blog-content {
+    color: #000;
+  }
+
+  body.light-theme .back-btn {
+    background: #0077ff;
+    color: #fff;
+  }
+
+  body.light-theme .back-btn:hover {
+    background: #000;
+    color: #fff;
+  }
+
+  @media (max-width: 600px) {
+    .blog-title {
+      font-size: 1.3rem;
+    }
+
+    .back-btn {
+      font-size: 0.75rem;
+      padding: 0.3rem 0.8rem;
+      top: 5.2rem;
+      left: 1.5rem; /* fallback for small screens */
+    }
+  }
+
+  body {
+    overflow-y: auto;
+  }
+</style>
+</head>
+<body>
+
+  <!-- 🌗 Toggle -->
+  <div class="fixed-toggle">
+    <span id="theme-icon" title="Toggle theme">🌙</span>
+  </div>
+
+  <!-- 🧠 Header -->
+  <header class="site-header">
+    <a href="index.html" class="site-name">mayank.</a><span class="page-path"> / blogs</span>
+  </header>
+
+  <!-- ⬅️ Back Button -->
+  <a href="blogs.html" class="back-btn">← Back to Blogs</a>
+
+  <!-- 📝 Blog Title -->
+  <h1 class="blog-title">Cloning a Website Taught Me More Than 4 College Semesters</h1>
+
+  <!-- 📄 Blog Content -->
+  <div class="blog-content">
+    <p>Not even kidding, I made this entire website in just one day.<br />
+      Yeah, one single day, with the help of YouTube and AI.</p>
+
+    <p>Honestly, these two have taught me way more than any school or college I’ve been to.  
+      And I genuinely mean it.  
+      The real stuff, the practical knowledge, the things I was actually curious about,  
+      I found all of that online, not in some classroom with chalk and dust and rules.</p>
+
+    <p>I genuinely feel like schools and colleges need to rethink how they teach.  
+      They need to level up and start focusing on what students are actually interested in.  
+      All these group projects, random assignments, and semester exams feel so unnecessary most of the time.</p>
+
+    <p>I’m not saying every subject is useless. Every subject has its own value, sure.  
+      But forcing students to go deep into topics they’ll never use in life makes no sense.</p>
+
+    <p>Why should someone who’s passionate about filmmaking or business be made to study the depths of advanced math or inorganic chemistry?  
+      Basics are fine, they help. But beyond that, it just feels like a waste of time.</p>
+
+    <p>I once came across Elon Musk’s school, Astra Nova, and the concept blew my mind.  
+      They focus only on what actually matters. STEM—Science, Technology, Engineering, and Maths.  
+      That’s it. No unnecessary drama. Just pure, useful learning.  
+      Imagine getting to study engineering from childhood if that’s where your interest lies.  
+      That sounds like a dream compared to what most of us go through.</p>
+
+    <p>And let’s be honest, half the professors in our colleges don’t even fully understand the subjects they’re teaching.  
+      I’ve literally seen some of them watch tutorial videos on YouTube right before class  
+      when they connect their laptops to the projector.  
+      It’s both funny and sad at the same time.</p>
+
+    <p>I wish schools and colleges in India were better.  
+      I wish they actually cared about what students want to learn.  
+      But till then, we make do.  
+      We explore, we learn on our own, and we try to build something meaningful.</p>
+
+    <p>That’s all for now.<br />Adios.</p>
+  </div>
+
+  <!-- 👣 Footer -->
+  <footer class="footer">
+    <div class="footer-left">
+      Copyright © 2025 <a href="index.html">Mayank Kumar</a>
+    </div>
+    <div class="footer-right">
+      <a href="https://linkedin.com/in/actualmayank" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="https://github.com/actualmayank" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="https://instagram.com/actualmayank" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://monkeytype.com/profile/actualmayank" target="_blank"><i class="fas fa-keyboard"></i></a>
+    </div>
+  </footer>
+
+  <!-- 🌗 Theme Toggle Script -->
+  <script>
+    const themeIcon = document.getElementById('theme-icon');
+    const root = document.body;
+
+    if (localStorage.getItem('theme') === 'light') {
+      root.classList.add('light-theme');
+      themeIcon.textContent = '☀️';
+    }
+
+    themeIcon.addEventListener('click', () => {
+      root.classList.toggle('light-theme');
+      localStorage.setItem('theme', root.classList.contains('light-theme') ? 'light' : 'dark');
+      themeIcon.textContent = root.classList.contains('light-theme') ? '☀️' : '🌙';
+    });
+  </script>
+
+</body>
+</html>
