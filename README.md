@@ -1,4 +1,4 @@
-# mayank. — portfolio
+# mayank. — portfolioo
 
 Minimal, fast, and dark-themed personal portfolio.
 
