@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>mayank. / projects</title>
+  <link rel="stylesheet" href="assets/style.css" />
+  <link rel="icon" href="assets/favicon.png" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    @media (max-width: 768px) {
+      .no-scroll-page .card {
+        width: 90%;
+        padding: 2rem 1.2rem;
+        text-align: center;
+      }
+
+      .no-scroll-page .card h2 {
+        font-size: 1.4rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 🌙 Theme Toggle -->
+  <div class="fixed-toggle">
+    <span id="theme-icon" title="Toggle theme">🌙</span>
+  </div>
+
+  <!-- 🧠 Top Header -->
+  <header class="site-header">
+    <a href="index.html" class="site-name">mayank.</a><span class="page-path"> / projects</span>
+  </header>
+
+  <!-- 🚫 No Scroll Content -->
+  <div class="no-scroll-page">
+    <div class="card reveal">
+      <h2>Coming Soon...</h2>
+    </div>
+  </div>
+
+  <!-- 👣 Footer -->
+  <footer class="footer">
+    <div class="footer-left">
+      Copyright 2025 © <a href="index.html">Mayank Kumar</a>
+    </div>
+    <div class="footer-right">
+      <a href="https://linkedin.com/in/actualmayank" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="https://github.com/actualmayank" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="https://instagram.com/actualmayank" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://monkeytype.com/profile/actualmayank" target="_blank"><i class="fas fa-keyboard"></i></a>
+    </div>
+  </footer>
+
+  <!-- 🌓 Toggle Script -->
+  <script>
+    const themeIcon = document.getElementById('theme-icon');
+    const root = document.body;
+
+    if (localStorage.getItem('theme') === 'light') {
+      root.classList.add('light-theme');
+      themeIcon.textContent = '☀️';
+    }
+
+    themeIcon.addEventListener('click', () => {
+      if (root.classList.contains('light-theme')) {
+        root.classList.remove('light-theme');
+        localStorage.setItem('theme', 'dark');
+        themeIcon.textContent = '🌙';
+      } else {
+        root.classList.add('light-theme');
+        localStorage.setItem('theme', 'light');
+        themeIcon.textContent = '☀️';
+      }
+    });
+  </script>
+
+</body>
+</html>
