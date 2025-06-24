@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>mayank.</title>
+  <link rel="icon" type="image/png" href="assets/favicon.png" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="assets/style.css" />
+  <style>
+    @media (max-width: 768px) {
+      .card {
+        width: 90%;
+        padding: 2rem 1rem;
+      }
+
+      .profile-pic {
+        width: 120px;
+        height: 120px;
+      }
+
+      .tagline {
+        font-size: 1rem;
+      }
+
+      .buttons {
+        flex-direction: column;
+        gap: 0.75rem;
+      }
+
+      .buttons a {
+        display: block;
+        width: 100%;
+        text-align: center;
+        font-size: 0.95rem;
+      }
+
+      .social-icons {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+        margin-bottom: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body class="landing">
+  <div class="grid-loop"></div>
+  <div class="card">
+    <img src="assets/profile.jpg" alt="Profile Picture" class="profile-pic" />
+    <h2>Mayank Kumar</h2>
+    <p class="tagline"><span class="typing-text"></span><span class="cursor">|</span></p>    
+
+    <div class="social-icons">
+      <a href="https://linkedin.com/in/actualmayank" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="https://github.com/actualmayank" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="https://instagram.com/actualmayank" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://monkeytype.com/profile/actualmayank" target="_blank"><i class="fas fa-keyboard"></i></a>
+    </div>    
+
+    <div class="buttons" style="display: flex; gap: 1rem;">
+      <a href="projects.html">🧪 Projects</a>
+      <a href="blogs.html">🧠 Blogs & Thoughts</a>
+      <a href="contact.html">📫 Contact Me</a>
+    </div>
+  </div>
+
+  <!-- ✨ Typing Effect Script -->
+  <script>
+    const roles = ["developer.", "creator.", "night owl. 🦉"];
+    const typingEl = document.querySelector(".typing-text");
+    let roleIndex = 0;
+    let charIndex = 0;
+    let typing = true;
+
+    function typeLoop() {
+      if (typing) {
+        if (charIndex < roles[roleIndex].length) {
+          typingEl.textContent += roles[roleIndex].charAt(charIndex);
+          charIndex++;
+          setTimeout(typeLoop, 100);
+        } else {
+          typing = false;
+          setTimeout(typeLoop, 1300);
+        }
+      } else {
+        if (charIndex > 0) {
+          typingEl.textContent = roles[roleIndex].substring(0, charIndex - 1);
+          charIndex--;
+          setTimeout(typeLoop, 50);
+        } else {
+          typing = true;
+          roleIndex = (roleIndex + 1) % roles.length;
+          setTimeout(typeLoop, 500);
+        }
+      }
+    }
+
+    window.addEventListener("load", typeLoop);
+  </script>  
+</body>
+</html>

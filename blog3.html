@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>mayank. / blog3</title>
+  <link rel="stylesheet" href="assets/style.css" />
+  <link rel="icon" href="assets/favicon.png" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    .blog-title {
+      margin-top: 7rem;
+      font-size: 1.6rem;
+      font-weight: bold;
+      text-align: center;
+      padding: 0 1rem;
+    }
+  
+    .blog-content {
+      max-width: 800px;
+      margin: 1.5rem auto 4rem;
+      padding: 0 2rem;
+      line-height: 1.6;
+      font-size: 1rem;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 1s ease, transform 1s ease;
+    }
+  
+    .blog-content.reveal {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  
+    .back-btn {
+      position: fixed;
+      top: 5rem;
+      left: 2.5rem;
+      z-index: 1000;
+      padding: 0.4rem 1rem;
+      background: #38bdf8;
+      color: #000;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 4px;
+      font-size: 0.85rem;
+      transition: all 0.3s ease;
+    }
+  
+    .back-btn:hover {
+      background: #000;
+      color: #fff;
+    }
+  
+    body.light-theme .blog-content {
+      color: #000;
+    }
+  
+    body.light-theme .back-btn {
+      background: #0077ff;
+      color: #fff;
+    }
+  
+    body.light-theme .back-btn:hover {
+      background: #000;
+      color: #fff;
+    }
+  
+    @media (max-width: 768px) {
+      .blog-title {
+        font-size: 1.3rem;
+        padding: 0 1rem;
+      }
+  
+      .blog-content {
+        font-size: 0.95rem;
+        padding: 0 1.2rem;
+      }
+  
+      .back-btn {
+        font-size: 0.75rem;
+        padding: 0.3rem 0.8rem;
+        top: 5.2rem;
+        left: 1.5rem;
+      }
+    }
+  
+    /* ✨ Allow scroll again */
+    body {
+      overflow-y: auto;
+      overflow-x: hidden;
+    }
+  </style>
+  
+</head>
+<body>
+
+  <!-- 🌙 Toggle -->
+  <div class="fixed-toggle">
+    <span id="theme-icon" title="Toggle theme">🌙</span>
+  </div>
+
+  <!-- 🔝 Header -->
+  <header class="site-header">
+    <a href="index.html" class="site-name">mayank.</a><span class="page-path"> / blogs</span>
+  </header>
+
+  <!-- ⬅️ Back Button -->
+  <a href="blogs.html" class="back-btn">← Back to Blogs</a>
+
+  <!-- ✍️ Blog Title -->
+  <h1 class="blog-title">My Thoughts at 3AM</h1>
+
+  <!-- 📄 Blog Content -->
+  <div class="blog-content" id="blog-content">
+    <p>Around 3 in the morning, I’m usually doing one of a few things, either studying, coding, creating some content, or if I’m too bored, just watching movies or random series. Honestly, I’m a pretty nocturnal person. I actually enjoy staying up late and getting things done when the world’s asleep. It just hits different.</p>
+
+    <p>But every now and then, when everything starts feeling a bit too much, when I hit that saturation point, I stop. I shut off all the screens, turn off the lights, and just sit in silence. That’s when my mind really starts wandering.</p>
+
+    <p>I start thinking about life, about how far I’ve come. I’m stepping into my final year of college now. After this, it’s job, responsibilities, real-life stuff. I’m no longer that kid who could spend an entire day gaming, living carefree on my parents’ money. Now I’ll have to earn my own, live on it, and figure it out on my own.</p>
+
+    <p>Back then, life was simple, school, tuition, a little fun, games, friends, and then sleep. There wasn’t much to stress about. Now it’s all about internships, placements, CGPA, relationships. During exams, there are nights when I don’t even sleep, we pull all-nighters. Not ideal for health (not recommending it, btw), but yeah, it happens.</p>
+
+    <p>Still, every phase of life has its own kind of beauty. Back then, we didn’t have the freedom to do everything. But now? Now we can do whatever we want. No one stopping us. That’s the part of adulthood I genuinely like, you get to design your own life.</p>
+
+    <p>But man, childhood had its own magic too.</p>
+
+    <p>And somewhere in those thoughts, I slowly fall asleep. Peacefully.</p>
+
+    <p><strong>Adios.</strong></p>
+  </div>
+
+  <!-- 👣 Footer -->
+  <footer class="footer">
+    <div class="footer-left">
+      Copyright © 2025 <a href="index.html">Mayank Kumar</a>
+    </div>
+    <div class="footer-right">
+      <a href="https://linkedin.com/in/actualmayank" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="https://github.com/actualmayank" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="https://instagram.com/actualmayank" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://monkeytype.com/profile/actualmayank" target="_blank"><i class="fas fa-keyboard"></i></a>
+    </div>
+  </footer>
+
+  <!-- 🌗 Theme Toggle Script -->
+  <script>
+    const themeIcon = document.getElementById('theme-icon');
+    const root = document.body;
+
+    if (localStorage.getItem('theme') === 'light') {
+      root.classList.add('light-theme');
+      themeIcon.textContent = '☀️';
+    }
+
+    themeIcon.addEventListener('click', () => {
+      if (root.classList.contains('light-theme')) {
+        root.classList.remove('light-theme');
+        localStorage.setItem('theme', 'dark');
+        themeIcon.textContent = '🌙';
+      } else {
+        root.classList.add('light-theme');
+        localStorage.setItem('theme', 'light');
+        themeIcon.textContent = '☀️';
+      }
+    });
+
+    // 👇 Reveal on scroll
+    window.addEventListener('load', () => {
+      const content = document.getElementById('blog-content');
+      setTimeout(() => content.classList.add('reveal'), 200);
+    });
+  </script>
+</body>
+</html>
