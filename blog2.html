@@ -15,24 +15,24 @@
       text-align: center;
       padding: 0 1rem;
     }
-  
+
     .blog-content {
-  max-width: 800px;
-  margin: 1.5rem auto 4rem;
-  padding: 0 2rem;
-  line-height: 1.6;
-  font-size: 1rem;
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 1s ease, transform 1s ease;
-  **padding-bottom: 3rem;
-}
-  
+      max-width: 800px;
+      margin: 1.5rem auto 4rem;
+      padding: 0 2rem;
+      line-height: 1.6;
+      font-size: 1rem;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 1s ease, transform 1s ease;
+      padding-bottom: 3rem; /* 👈 Added padding at bottom */
+    }
+
     .blog-content.reveal {
       opacity: 1;
       transform: translateY(0);
     }
-  
+
     .back-btn {
       position: fixed;
       top: 5rem;
@@ -47,37 +47,37 @@
       font-size: 0.85rem;
       transition: all 0.3s ease;
     }
-  
+
     .back-btn:hover {
       background: #000;
       color: #fff;
     }
-  
+
     body.light-theme .blog-content {
       color: #000;
     }
-  
+
     body.light-theme .back-btn {
       background: #0077ff;
       color: #fff;
     }
-  
+
     body.light-theme .back-btn:hover {
       background: #000;
       color: #fff;
     }
-  
+
     @media (max-width: 768px) {
       .blog-title {
         font-size: 1.3rem;
         padding: 0 1rem;
       }
-  
+
       .blog-content {
         font-size: 0.95rem;
         padding: 0 1.2rem;
       }
-  
+
       .back-btn {
         font-size: 0.75rem;
         padding: 0.3rem 0.8rem;
@@ -85,13 +85,12 @@
         left: 1.5rem;
       }
     }
-  
+
     body {
       overflow-y: auto;
       overflow-x: hidden;
     }
   </style>
-  
 </head>
 <body>
 
@@ -167,24 +166,24 @@
   <script>
     const themeIcon = document.getElementById('theme-icon');
     const root = document.body;
-  
+
     if (localStorage.getItem('theme') === 'light') {
       root.classList.add('light-theme');
       themeIcon.textContent = '☀️';
     }
-  
+
     themeIcon.addEventListener('click', () => {
       root.classList.toggle('light-theme');
       localStorage.setItem('theme', root.classList.contains('light-theme') ? 'light' : 'dark');
       themeIcon.textContent = root.classList.contains('light-theme') ? '☀️' : '🌙';
     });
-  
+
     // Reveal animation on load
     window.addEventListener('load', () => {
       const content = document.querySelector('.blog-content');
       setTimeout(() => content.classList.add('reveal'), 200);
     });
-  </script>  
+  </script>
 
 </body>
 </html>
