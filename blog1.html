@@ -81,24 +81,19 @@
   </style>
 </head>
 <body>
-
-  <!-- 🌗 Toggle -->
+  
   <div class="fixed-toggle">
     <span id="theme-icon" title="Toggle theme">🌙</span>
   </div>
-
-  <!-- 🧠 Header -->
+  
   <header class="site-header">
     <a href="index.html" class="site-name">mayank.</a><span class="page-path"> / blogs</span>
   </header>
-
-  <!-- ⬅️ Back Button -->
+  
   <a href="blogs.html" class="back-btn">← Back to Blogs</a>
-
-  <!-- ✍️ Blog Title -->
+  
   <h1 class="blog-title">Who am I?</h1>
-
-  <!-- 📄 Blog Content -->
+  
   <div class="blog-content">
     <p>Hey. I’m Mayank Kumar.</p>
 
@@ -121,7 +116,7 @@
     <p>That’s me.<br />Simple, curious, still figuring things out, but loving every bit of the journey.</p>
   </div>
 
-  <!-- 👣 Footer -->
+  
   <footer class="footer">
     <div class="footer-left">
       Copyright © 2025 <a href="index.html">Mayank Kumar</a>
@@ -134,7 +129,7 @@
     </div>
   </footer>
 
-  <!-- 🌗 Theme & Reveal -->
+  
   <script>
     const themeIcon = document.getElementById('theme-icon');
     const root = document.body;
@@ -149,8 +144,7 @@
       localStorage.setItem('theme', root.classList.contains('light-theme') ? 'light' : 'dark');
       themeIcon.textContent = root.classList.contains('light-theme') ? '☀️' : '🌙';
     });
-
-    // Reveal animation
+    
     window.addEventListener('load', () => {
       const content = document.querySelector('.blog-content');
       setTimeout(() => content.classList.add('reveal'), 200);
