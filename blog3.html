@@ -85,7 +85,6 @@
       }
     }
   
-    /* ✨ Allow scroll again */
     body {
       overflow-y: auto;
       overflow-x: hidden;
@@ -95,23 +94,18 @@
 </head>
 <body>
 
-  <!-- 🌙 Toggle -->
   <div class="fixed-toggle">
     <span id="theme-icon" title="Toggle theme">🌙</span>
   </div>
 
-  <!-- 🔝 Header -->
   <header class="site-header">
     <a href="index.html" class="site-name">mayank.</a><span class="page-path"> / blogs</span>
   </header>
 
-  <!-- ⬅️ Back Button -->
   <a href="blogs.html" class="back-btn">← Back to Blogs</a>
 
-  <!-- ✍️ Blog Title -->
   <h1 class="blog-title">My Thoughts at 3AM</h1>
 
-  <!-- 📄 Blog Content -->
   <div class="blog-content" id="blog-content">
     <p>Around 3 in the morning, I’m usually doing one of a few things, either studying, coding, creating some content, or if I’m too bored, just watching movies or random series. Honestly, I’m a pretty nocturnal person. I actually enjoy staying up late and getting things done when the world’s asleep. It just hits different.</p>
 
@@ -130,7 +124,6 @@
     <p>Adios.</p>
   </div>
 
-  <!-- 👣 Footer -->
   <footer class="footer">
     <div class="footer-left">
       Copyright © 2025 <a href="index.html">Mayank Kumar</a>
@@ -143,7 +136,6 @@
     </div>
   </footer>
 
-  <!-- 🌗 Theme Toggle Script -->
   <script>
     const themeIcon = document.getElementById('theme-icon');
     const root = document.body;
@@ -165,7 +157,6 @@
       }
     });
 
-    // 👇 Reveal on scroll
     window.addEventListener('load', () => {
       const content = document.getElementById('blog-content');
       setTimeout(() => content.classList.add('reveal'), 200);
