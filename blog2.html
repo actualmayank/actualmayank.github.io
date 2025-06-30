@@ -94,23 +94,18 @@
 </head>
 <body>
 
-  <!-- 🌗 Toggle -->
   <div class="fixed-toggle">
     <span id="theme-icon" title="Toggle theme">🌙</span>
   </div>
 
-  <!-- 🧠 Header -->
   <header class="site-header">
     <a href="index.html" class="site-name">mayank.</a><span class="page-path"> / blogs</span>
   </header>
 
-  <!-- ⬅️ Back Button -->
   <a href="blogs.html" class="back-btn">← Back to Blogs</a>
 
-  <!-- 📝 Blog Title -->
   <h1 class="blog-title">Cloning a Website Taught Me More Than 4 College Semesters</h1>
 
-  <!-- 📄 Blog Content -->
   <div class="blog-content">
     <p>Not even kidding, I made this entire website in just one day.<br />
       Yeah, one single day, with the help of YouTube and AI.</p>
@@ -149,7 +144,6 @@
     <p>That’s all for now.<br />Adios.</p>
   </div>
 
-  <!-- 👣 Footer -->
   <footer class="footer">
     <div class="footer-left">
       Copyright © 2025 <a href="index.html">Mayank Kumar</a>
@@ -162,7 +156,6 @@
     </div>
   </footer>
 
-  <!-- 🌗 Theme Toggle Script -->
   <script>
     const themeIcon = document.getElementById('theme-icon');
     const root = document.body;
@@ -178,7 +171,6 @@
       themeIcon.textContent = root.classList.contains('light-theme') ? '☀️' : '🌙';
     });
 
-    // Reveal animation on load
     window.addEventListener('load', () => {
       const content = document.querySelector('.blog-content');
       setTimeout(() => content.classList.add('reveal'), 200);
