@@ -793,7 +793,6 @@ body.light-theme .blogs-page {
   color: #ccc;
 }
 
-/* Animation (if not already present) */
 .reveal {
   opacity: 0;
   transform: translateY(30px);
@@ -805,7 +804,7 @@ body.light-theme .blogs-page {
     transform: translateY(0);
   }
 }
-/* Default (dark mode) Read More button */
+
 .blog-card a.read-more {
   display: inline-block;
   margin-top: 1rem;
@@ -823,7 +822,6 @@ body.light-theme .blogs-page {
   color: #fff;
 }
 
-/* Light mode override */
 body.light-theme .blog-card a.read-more {
   background: #0077ff;
   color: #fff;
@@ -889,7 +887,7 @@ body.light-theme .blog-card a.read-more:hover {
 .blog-content {
   max-width: 800px;
   margin: 1.5rem auto;
-  padding: 0 2rem 5rem; /* Add 5rem padding-bottom */
+  padding: 0 2rem 5rem;
   line-height: 1.6;
   font-size: 1rem;
   opacity: 0;
