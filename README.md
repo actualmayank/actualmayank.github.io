@@ -1,79 +1,105 @@
-# MoonOS 98
+```md
+# 🌙 MoonOS 98
 
-MoonOS 98 is a polished retro operating-system portfolio for Mayank Kumar. On desktop it behaves like a Windows 98-inspired space desktop with draggable, resizable windows. On mobile it becomes a Windows Phone-inspired tile interface.
+An interactive portfolio inspired by the classic Windows 98 desktop, reimagined with a modern web stack.
 
-## Tech Stack
+Instead of scrolling through a traditional portfolio, visitors can explore projects, experience, skills, and contact information through a nostalgic desktop operating system experience.
+
+## 🌐 Live Demo
+
+**Website:** https://moonbucks.me
+
+---
+
+## ✨ Features
+
+- 🖥️ Windows 98 inspired desktop interface
+- 📁 Interactive desktop icons and windows
+- 📱 Responsive mobile experience with a custom touch-friendly UI
+- 💼 Projects with dedicated detail pages
+- 🎓 Education & Experience explorer
+- 📄 Resume viewer
+- 💻 Built-in terminal with hidden commands
+- 🌙 Custom MoonOS branding
+- ⚡ Fast and lightweight (Vite + React)
+
+---
+
+## 🛠️ Tech Stack
 
 - React
 - TypeScript
 - Vite
-- Tailwind CSS
-- Framer Motion
-- react-rnd
+- CSS3
+- Lucide React
 
-## Run Locally
+---
+
+## 📂 Project Structure
+
+```
+
+src/
+├── components/
+├── data/
+├── hooks/
+├── styles.css
+├── App.tsx
+└── main.tsx
+
+````
+
+---
+
+## 🚀 Running Locally
+
+Clone the repository
+
+```bash
+git clone https://github.com/actualmayank/actualmayank.github.io.git
+````
+
+Install dependencies
 
 ```bash
 npm install
+```
+
+Start the development server
+
+```bash
 npm run dev
 ```
 
-Then open the local Vite URL, usually `http://localhost:5173`.
-
-## Build
+Build for production
 
 ```bash
 npm run build
 ```
 
-Preview the production build:
+---
 
-```bash
-npm run preview
+## 📸 Screenshots
+
+> Add desktop and mobile screenshots here.
+
+---
+
+## 👨‍💻 Author
+
+**Mayank Kumar**
+
+Portfolio → https://moonbucks.me
+
+GitHub → https://github.com/actualmayank
+
+LinkedIn → https://linkedin.com/in/actualmayank
+
+---
+
+## 📜 License
+
+This project is open source and available under the MIT License.
+
 ```
-
-## Edit Portfolio Content
-
-Most content lives in:
-
-```text
-src/data/portfolioData.ts
 ```
-
-Update this file to replace:
-
-- Profile name, role, intro, stats, and system info
-- Project titles, descriptions, skills, years, and badges
-- Education entries
-- Experience entries
-- Social links
-- Contact email
-- Resume path
-- Profile image path
-
-## Replace Assets
-
-This project currently uses CSS-generated retro icons, CSS moon art, and browser-generated tones, so no copyrighted Windows assets are included.
-
-Recommended replacement paths:
-
-- Profile image: `public/images/profile-placeholder.png`
-- Resume PDF: `public/resume/Mayank-Kumar-Resume.pdf`
-- Certificate image: add it under `public/images/` and replace the certificate placeholder in `src/components/windows/WindowContents.tsx`
-- Sounds: replace the generated tones in `src/hooks/useSound.ts` with local audio files if desired
-- Wallpaper assets: replace or extend the CSS moon/stars in `src/styles.css`
-
-## Deployment To Vercel
-
-1. Push this project to GitHub.
-2. Import the repo in Vercel.
-3. Use the default Vite settings:
-   - Build command: `npm run build`
-   - Output directory: `dist`
-4. Deploy.
-
-## Notes
-
-- Window positions and mute preference are saved in `localStorage`.
-- Type `moon` or `mayank` on the desktop to open the hidden developer mode window.
-- The shutdown option opens a dialog only; it does not close the website.
