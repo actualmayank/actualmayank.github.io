@@ -1,77 +1,29 @@
-```md
 # 🌙 MoonOS 98
 
-An interactive portfolio inspired by the classic Windows 98 desktop, reimagined with a modern web stack.
+An interactive portfolio inspired by the classic Windows 98 desktop.
 
-Instead of scrolling through a traditional portfolio, visitors can explore projects, experience, skills, and contact information through a nostalgic desktop operating system experience.
+Instead of a traditional scrolling website, visitors can explore projects, skills, experience, and more through a nostalgic desktop interface with a custom mobile experience.
 
-## 🌐 Live Demo
+## 🚀 Live Demo
 
-**Website:** https://moonbucks.me
+**https://moonbucks.me**
 
----
+## ✨ Built With
 
-## ✨ Features
+* React
+* TypeScript
+* Vite
+* CSS
+* Lucide React
 
-- 🖥️ Windows 98 inspired desktop interface
-- 📁 Interactive desktop icons and windows
-- 📱 Responsive mobile experience with a custom touch-friendly UI
-- 💼 Projects with dedicated detail pages
-- 🎓 Education & Experience explorer
-- 📄 Resume viewer
-- 💻 Built-in terminal with hidden commands
-- 🌙 Custom MoonOS branding
-- ⚡ Fast and lightweight (Vite + React)
-
----
-
-## 🛠️ Tech Stack
-
-- React
-- TypeScript
-- Vite
-- CSS3
-- Lucide React
-
----
-
-## 📂 Project Structure
-
-```
-
-src/
-├── components/
-├── data/
-├── hooks/
-├── styles.css
-├── App.tsx
-└── main.tsx
-
-````
-
----
-
-## 🚀 Running Locally
-
-Clone the repository
-
-```bash
-git clone https://github.com/actualmayank/actualmayank.github.io.git
-````
-
-Install dependencies
+## 💻 Run Locally
 
 ```bash
 npm install
-```
-
-Start the development server
-
-```bash
 npm run dev
 ```
 
-Build for production
+Build for production:
 
 ```bash
 npm run build
@@ -79,27 +31,4 @@ npm run build
 
 ---
 
-## 📸 Screenshots
-
-> Add desktop and mobile screenshots here.
-
----
-
-## 👨‍💻 Author
-
-**Mayank Kumar**
-
-Portfolio → https://moonbucks.me
-
-GitHub → https://github.com/actualmayank
-
-LinkedIn → https://linkedin.com/in/actualmayank
-
----
-
-## 📜 License
-
-This project is open source and available under the MIT License.
-
-```
-```
+Made with ❤️ by **mayank.**
